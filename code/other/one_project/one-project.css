@@ -1,0 +1,18 @@
+/* navigation */
+#home img{
+    filter: drop-shadow(0 0 5px #fff2d8);
+}
+
+#scroll-buttons, #home{
+    visibility: visible;
+    pointer-events: all;
+}
+
+
+
+/* main */
+.article-content-text{
+    width: 80%;
+    max-width: 80%;
+    height: 80%;
+}
