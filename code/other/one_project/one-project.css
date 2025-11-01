@@ -11,8 +11,37 @@
 
 
 /* main */
+.content-text{
+    max-height: 80%;
+}
+
+.double-content-text{
+    width: 80%;
+    max-width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+.double-content-text .article-content-text{
+    min-width: 50%;
+}
+
 .article-content-text{
     width: 80%;
     max-width: 80%;
     height: 80%;
+}
+
+
+
+/* media queries */
+@media only screen and (max-width: 799px){
+    .double-content-text{
+        flex-direction: column;
+    }
+    .double-content-text .article-content-text{
+        min-width: 90%;
+    }
 }
