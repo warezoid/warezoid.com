@@ -1,3 +1,24 @@
+/* all */
+ul{
+    list-style-type: none;
+    min-width: 80%;
+    text-align: left;
+    font-size: 1.8rem;
+}
+
+a li:hover{
+    transition: 0.4s;
+    transform: scale(1.05);
+    color: #ec6116;
+}
+
+.first-pad{
+    padding-left: 5rem;
+}
+.second-pad{
+    padding-left: 10rem;
+}
+
 /* navigation */
 #home img{
     filter: drop-shadow(0 0 5px #fff2d8);
@@ -33,6 +54,8 @@
     max-width: 80%;
     height: 80%;
 }
+
+
 
 
 
