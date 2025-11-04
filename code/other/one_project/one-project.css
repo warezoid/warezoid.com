@@ -57,6 +57,31 @@ a li:hover{
     height: 80%;
 }
 
+#printingNotes .content-text{
+    display: flex;
+    gap: 5%;
+}
+
+table{
+    border: #ec6116 solid 5px;
+    font-size: 1.2rem;
+    line-height: 2.6rem;
+    text-align: center;
+}
+
+tr{
+    background-color: #ffb90848;
+}
+
+th{
+    font-weight: 600;
+    font-size: 1.3rem;
+    background-color: #ec611649;
+}
+tr:nth-child(odd){
+    background-color: #ec611649;
+}
+
 
 
 /* media queries */
