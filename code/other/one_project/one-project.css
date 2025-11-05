@@ -63,23 +63,42 @@ a li:hover{
 }
 
 table{
-    border: #ec6116 solid 5px;
-    font-size: 1.2rem;
-    line-height: 2.6rem;
+    overflow: hidden;
+    line-height: 3rem;
+    border-collapse: collapse;
+    border-radius: 0.4rem;
     text-align: center;
+    font-size: 1.2rem;
 }
 
 tr{
     background-color: #ffb90848;
 }
-
-th{
-    font-weight: 600;
-    font-size: 1.3rem;
-    background-color: #ec611649;
-}
 tr:nth-child(odd){
     background-color: #ec611649;
+}
+
+th{
+    background-color: #ec611649;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+td a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+td a:hover{
+    transition: 0.4s;
+    transform: scale(1.05);
+}
+td a:hover img{
+    transition: 0.4s;
+    transform: scale(1.1);
+}
+td img{
+    width: 1rem;
 }
 
 
