@@ -121,6 +121,10 @@ a{
     color: rgba(0, 0, 0, 1);
 }
 
+#home{
+    max-width: 60px;
+}
+
 #scroll-buttons{
     visibility: hidden;
     pointer-events: none;
