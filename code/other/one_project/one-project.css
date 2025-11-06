@@ -34,6 +34,12 @@ a li:hover{
 
 
 /* main */
+.article-content-text{
+    width: 80%;
+    max-width: 80%;
+    height: 80%;
+}
+
 .content-text{
     max-height: 80%;
 }
@@ -51,54 +57,39 @@ a li:hover{
     min-width: 50%;
 }
 
-.article-content-text{
-    width: 80%;
-    max-width: 80%;
-    height: 80%;
-}
-
-#printingNotes .content-text{
-    display: flex;
-    gap: 5%;
-}
-
-table{
-    overflow: hidden;
-    line-height: 3rem;
-    border-collapse: collapse;
-    border-radius: 0.4rem;
-    text-align: center;
-    font-size: 1.2rem;
-}
-
-tr{
-    background-color: #ffb90848;
-}
-tr:nth-child(odd){
-    background-color: #ec611649;
-}
-
-th{
-    background-color: #ec611649;
-    font-weight: 600;
-    font-size: 1.3rem;
-}
-
-td a{
+#printing-notes{
+    overflow: visible;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 100px;
 }
-td a:hover{
-    transition: 0.4s;
-    transform: scale(1.05);
+
+#printing-notes .content{
+    width: 80%;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
 }
-td a:hover img{
-    transition: 0.4s;
-    transform: scale(1.1);
+
+#printing-notes .content-text{
+    max-width: 100%;
+    width: 100%;
 }
-td img{
-    width: 1rem;
+
+#project-overview{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5vw;
+}
+
+.one-project{
+    max-width: 420px;
+    max-height: 520px;
 }
 
 
