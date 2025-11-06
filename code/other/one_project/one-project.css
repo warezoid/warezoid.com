@@ -12,6 +12,10 @@ a li:hover{
     color: #ec6116;
 }
 
+a.highlighting:hover{
+    text-decoration: underline;
+}
+
 .first-pad{
     padding-left: 5rem;
 }
@@ -90,6 +94,13 @@ a li:hover{
 .one-project{
     max-width: 420px;
     max-height: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.one-project-text a{
+    text-shadow: #ec6116 0 0 10px;
 }
 
 
