@@ -55,6 +55,12 @@ a.highlighting:hover{
 .article-content-text p:not(:last-child) {
   padding-bottom: 2rem;
 }
+.article-content-text img{
+    max-width: 100%;
+    min-width: 40%;
+    max-height: 80vh;
+    min-height: 40vh;  
+}
 
 .content-text{
     max-height: 80%;
