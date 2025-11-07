@@ -42,7 +42,7 @@ a.highlighting:hover{
     height: auto;
     padding-top: 100px;
 }
-.main:first-child{
+.main:first-child, #contact-main{
     height: 100vh;
     padding-top: 0;
 }

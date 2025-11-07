@@ -6,6 +6,13 @@ const tween1 = KUTE.fromTo(
     { repeat: 999, duration: 6000, yoyo: true }
 ).start()
 
+const tween2 = KUTE.fromTo(
+    '#blob-3',
+    { path: '#blob-3' },
+    { path: '#blob-4' },
+    { repeat: 999, duration: 6000, yoyo: true }
+).start()
+
 
 
 
