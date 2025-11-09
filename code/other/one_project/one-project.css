@@ -181,10 +181,6 @@ a.highlighting:hover{
     height: 100%;
 }
 
-
-
-
-
 #gallery-popup{
     z-index: 1100;
     width: 100vw;
@@ -193,23 +189,24 @@ a.highlighting:hover{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     font-size: 5rem;
-
-
-    display: none;
+}
+#gallery-popup div{
+    color: #ec6116;
+    text-shadow: #ec6116 0 0 10px;
 }
 
 #gallery-popup-closeBtn{
     width: 80%;
     text-align: end;
-    background-color: red;
 }
 
 .gallery-popup-controls{
     width: 80%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -217,18 +214,17 @@ a.highlighting:hover{
 }
 
 #gallery-popup-image{
-    background-color: green;
     width: 80%;
     max-width: 80%;
     min-width: 320px;
-    max-height: 80vh;
+    max-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #gallery-popup-image img{
     width: 100%;
-    height: 100%;
 }
-
-
 
 
 
