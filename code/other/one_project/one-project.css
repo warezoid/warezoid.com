@@ -23,6 +23,10 @@ a.highlighting:hover{
     padding-left: 10rem;
 }
 
+.blured{
+    filter: blur(10px);
+}
+
 
 
 /* navigation */
@@ -185,7 +189,7 @@ a.highlighting:hover{
     z-index: 1100;
     width: 100vw;
     height: 100vh;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -194,12 +198,17 @@ a.highlighting:hover{
     left: 0;
     font-size: 5rem;
 }
-#gallery-popup div{
+#gallery-popup span{
+    cursor: pointer;
     color: #ec6116;
     text-shadow: #ec6116 0 0 10px;
 }
+#gallery-popup span:hover{
+    transition: 0.4s;
+    text-shadow: #ec6116 0 0 20px;
+}
 
-#gallery-popup-closeBtn{
+.gallery-popup-close{
     width: 80%;
     text-align: end;
 }
