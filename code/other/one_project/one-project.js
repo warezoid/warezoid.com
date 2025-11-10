@@ -15,21 +15,22 @@ const tween2 = KUTE.fromTo(
 
 
 
-const galleryContent = document.getElementById("gallery-content")
-const galleryContentImages = Array.from(galleryContent.children)
-const galleryPopup = document.getElementById("gallery-popup")
-const galleryPopupImage = document.getElementById("gallery-popup-image")
-const galleryCloseBtn = document.getElementById("gallery-popup-closeBtn")
+
+// photo gallery
 const webpage = document.getElementById("webpage")
-
-let index = -1;
-
-
+const galleryPopup = document.getElementById("gallery-popup")
+const galleryCloseBtn = document.getElementById("gallery-popup-closeBtn")
 
 galleryCloseBtn.addEventListener("click", () => {
     galleryPopup.style.display = "none"
     webpage.classList.remove("blured")
 })
+
+
+
+const galleryContent = document.getElementById("gallery-content")
+const galleryContentImages = Array.from(galleryContent.children)
+const galleryPopupImage = document.getElementById("gallery-popup-image")
 
 galleryContent.addEventListener("click", (e) => {
     if(e.target.nodeName == "IMG"){
@@ -40,6 +41,39 @@ galleryContent.addEventListener("click", (e) => {
     }
 })
 
+
+
+const backBtn = document.getElementById("gallery-popup-backButton")
+const forwardBtn = document.getElementById("gallery-popup-forwardButton")
+let index = -1
+
+const setImage = (i) => {
+    galleryPopupImage.src = galleryContentImages[i].firstElementChild.attributes.src.nodeValue
+}
+
+backBtn.addEventListener("click", () => {
+    if(index != -1){
+        index--
+
+        if(index < 0){
+            index = galleryContentImages.length - 1
+        }
+
+        setImage(index)
+    }
+})
+
+forwardBtn.addEventListener("click", () => {
+    if(index != -1){
+        index++
+
+        if(index > (galleryContentImages.length - 1)){
+            index = 0
+        }
+
+        setImage(index)
+    }
+})
 
 
 

@@ -1,3 +1,4 @@
+// toggle buttons
 let fullHeight = document.documentElement.scrollHeight
 let viewHeight = window.innerHeight
 

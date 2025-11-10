@@ -17,7 +17,7 @@ const tween2 = KUTE.fromTo(
 
 
 
-//navbar
+// navbar
 let navbarBtns = Array.from(document.getElementsByClassName("navbar-button"))
 let activeElement = navbarBtns[0]
 
@@ -140,7 +140,7 @@ const startLoading = () => {
 
 
 
-//project slideshow
+// project slideshow
 const slideshowProjects = [
     {
         id: 1,
