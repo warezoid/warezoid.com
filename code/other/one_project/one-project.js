@@ -16,9 +16,15 @@ const tween2 = KUTE.fromTo(
 
 
 const galleryContent = document.getElementById("gallery-content")
+const galleryContentImages = Array.from(galleryContent.children)
 const galleryPopup = document.getElementById("gallery-popup")
+const galleryPopupImage = document.getElementById("gallery-popup-image")
 const galleryCloseBtn = document.getElementById("gallery-popup-closeBtn")
 const webpage = document.getElementById("webpage")
+
+let index = -1;
+
+
 
 galleryCloseBtn.addEventListener("click", () => {
     galleryPopup.style.display = "none"
@@ -27,7 +33,8 @@ galleryCloseBtn.addEventListener("click", () => {
 
 galleryContent.addEventListener("click", (e) => {
     if(e.target.nodeName == "IMG"){
-        //e.target.currentSrc
+        galleryPopupImage.src = e.target.attributes.src.nodeValue
+        index = galleryContentImages.indexOf(e.target.parentElement)
         galleryPopup.style.display = "flex"
         webpage.classList.add("blured")
     }
