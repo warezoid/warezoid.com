@@ -39,6 +39,9 @@
     flex-wrap: wrap;
     gap: 5vw;
 }
+#project-overview a{
+    display: contents;
+}
 
 .one-project{
     max-width: 420px;
