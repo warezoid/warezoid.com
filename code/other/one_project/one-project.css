@@ -6,9 +6,13 @@ ul{
     font-size: 1.8rem;
 }
 
-a li:hover{
+li:hover{
     transition: 0.4s;
     transform: scale(1.05);
+    color: #ec6116;
+}
+li:hover a{
+    transition: 0.4s;
     color: #ec6116;
 }
 
