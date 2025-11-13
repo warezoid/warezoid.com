@@ -143,17 +143,19 @@ const startLoading = () => {
 // project slideshow
 const slideshowProjects = [
     {
-        id: 1,
+        id: 0,
         type: "software",
         background: "bitcointags.png",
         name: "Bitcointags",
+        link: "https://github.com/warezoid/bitcointags",
         description: "Browser extension that converts the fiat price of a product or service within a selected HTML entity into an approximate bitcoin price."
     },
     {
-        id: 2,
+        id: 1,
         type: "3d printing",
         background: "sponge_holder.png",
         name: "Sponge holder",
+        link: "https://warezoid.com/other/one_project/sponge_holder/sponge-holder.html",
         description: "The goal of this project is to create a kitchen holder that can hold a sponge and dish detergent and liquid soap."
     },
 ]
@@ -198,6 +200,10 @@ slideshow.addEventListener("animationend", (e) => {
         slideshow.style.animation = "fadeIn 0.2s forwards"
         updateSlideshow()
     }
+})
+
+slideshow.addEventListener("click", () => { 
+    window.location.href = slideshowProjects[slideshowIndex].link
 })
 
 
