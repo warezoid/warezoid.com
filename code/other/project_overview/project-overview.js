@@ -80,6 +80,29 @@ window.addEventListener("resize", () => {
 
 
 
+//filter
+const webpage = document.getElementById("webpage")
+const filterPopup = document.getElementById("filter-popup")
+const filterBtn = document.getElementById("filter-buttons")
+
+filterBtn.addEventListener("click", () => {
+    filterPopup.style.display = "flex"
+    webpage.classList.add("blured")
+})
+
+
+
+const filterCloseBtn = document.getElementById("close-button")
+
+filterCloseBtn.addEventListener("click", () => {
+    filterPopup.style.display = "none"
+    webpage.classList.remove("blured")
+})
+
+
+
+
+
 
 
 
