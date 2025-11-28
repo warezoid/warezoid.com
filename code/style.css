@@ -57,6 +57,10 @@ a{
     color: #ec6116;
 }
 
+.blured{
+    filter: blur(10px);
+}
+
 .button{
     cursor: pointer;
     width: 60px;
@@ -131,18 +135,6 @@ a{
 
 #home{
     max-width: 60px;
-}
-
-#filter-buttons{
-    pointer-events: all;
-    width: 180px;
-}
-.filter-text{
-    color: #fff2d8;
-    font-size: 26px;
-}
-.filter-image{
-    display: none;
 }
 
 #scroll-buttons{
@@ -304,17 +296,6 @@ a{
     #navbar{
         visibility: hidden;
         pointer-events: none;
-    }
-
-    #filter-buttons{
-        pointer-events: all;
-        width: 60px;
-    }
-    .filter-text{
-        display: none;
-    }
-    .filter-image{
-        display: flex;
     }
 
     #scroll-buttons{

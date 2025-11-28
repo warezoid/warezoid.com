@@ -14,110 +14,175 @@
   </head>
 
   <body>
-    <div class="main">
-      <div class="content">
-        <div class="content-text">
-          <h2>projects.</h2>
+    <div id="webpage">
+      <div class="main">
+        <div class="content">
+          <div class="content-text">
+            <h2>projects.</h2>
 
-          <p>
-            In the table below you will find a complete list of all my projects.
-          </p>
-        </div>
+            <p>
+              In the table below you will find a complete list of all my projects.
+            </p>
+          </div>
 
-        <div id="project-overview">
-          <a href="https://github.com/warezoid/bitcointags" target="_blank">
-            <div class="one-project" style="background-image: url(./../../src/img/slideshow/bitcointags.png);">
-              <div class="one-project-toolbar">
-                <p>software.</p>
-                <p>2025</p>
-              </div>
-
-              <div class="one-project-text">
-                <h3>Bitcointags</h3>
-                <p>Browser extension that converts the fiat price of a product or service within a selected HTML entity into an approximate bitcoin price.</p>
-              </div>
-            </div>
-          </a>
-
-          <a href="./../one_project/sponge_holder/sponge-holder.html">
-            <div class="one-project" style="background-image: url(./../../src/img/slideshow/sponge_holder.png);">
-              <div class="one-project-toolbar">
-                  <p>3d printing.</p>
+          <div id="project-overview">
+            <a href="https://github.com/warezoid/bitcointags" target="_blank">
+              <div class="one-project" style="background-image: url(./../../src/img/slideshow/bitcointags.png);">
+                <div class="one-project-toolbar">
+                  <p>software.</p>
                   <p>2025</p>
-              </div>
+                </div>
 
-              <div class="one-project-text">
-                <h3>Sponge holder</h3>
-                <p>Kitchen holder that can hold a sponge and dish detergent and liquid soap.</p>
+                <div class="one-project-text">
+                  <h3>Bitcointags</h3>
+                  <p>Browser extension that converts the fiat price of a product or service within a selected HTML entity into an approximate bitcoin price.</p>
+                </div>
               </div>
+            </a>
+
+            <a href="./../one_project/sponge_holder/sponge-holder.html">
+              <div class="one-project" style="background-image: url(./../../src/img/slideshow/sponge_holder.png);">
+                <div class="one-project-toolbar">
+                    <p>3d printing.</p>
+                    <p>2025</p>
+                </div>
+
+                <div class="one-project-text">
+                  <h3>Sponge holder</h3>
+                  <p>Kitchen holder that can hold a sponge and dish detergent and liquid soap.</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="./../one_project/plant_marker/plant-marker.html">
+              <div class="one-project" style="background-image: url(./../../src/img/overview/plant_marker.png);">
+                <div class="one-project-toolbar">
+                    <p>3d printing.</p>
+                    <p>2024</p>
+                </div>
+
+                <div class="one-project-text">
+                  <h3>Plant marker</h3>
+                  <p>Simple plant marker.</p>
+                </div>
+              </div>
+            </a>
+
+            <a href="./../one_project/tv_antenna_mount/tv-antenna-mount.html">
+              <div class="one-project" style="background-image: url(./../../src/img/overview/tv_antenna_mount.png);">
+                <div class="one-project-toolbar">
+                    <p>3d printing.</p>
+                    <p>2024</p>
+                </div>
+
+                <div class="one-project-text">
+                  <h3>TV antenna mount</h3>
+                  <p>Structure for mounting a TV antenna with zip ties, attached to the TV via VESA screw holes.</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div id="footer-container" class="main">
+        created by warezoid with the love of freedom and numbers &nbsp; 🧡
+      </div>
+
+
+
+
+
+      <div id="navigation">
+        <div class="navigation-row">
+          <a href="./../../index.html#projects-main" id="home">
+            <div class="button">
+              <img src="./../../src/img/icons/home.svg" alt="Home icon">
             </div>
           </a>
 
-          <a href="./../one_project/plant_marker/plant-marker.html">
-            <div class="one-project" style="background-image: url(./../../src/img/overview/plant_marker.png);">
-              <div class="one-project-toolbar">
-                  <p>3d printing.</p>
-                  <p>2024</p>
-              </div>
+          <div id="filter-buttons" class="button">
+            <span class="filter-text">filter.</span>
 
-              <div class="one-project-text">
-                <h3>Plant marker</h3>
-                <p>Simple plant marker.</p>
-              </div>
+            <div class="filter-image">
+              <img src="./../../src/img/icons/settings.svg" alt="Settings icon">
             </div>
-          </a>
+          </div>
+        </div>
 
-          <a href="./../one_project/tv_antenna_mount/tv-antenna-mount.html">
-            <div class="one-project" style="background-image: url(./../../src/img/overview/tv_antenna_mount.png);">
-              <div class="one-project-toolbar">
-                  <p>3d printing.</p>
-                  <p>2024</p>
-              </div>
-
-              <div class="one-project-text">
-                <h3>TV antenna mount</h3>
-                <p>Structure for mounting a TV antenna with zip ties, attached to the TV via VESA screw holes.</p>
-              </div>
-            </div>
-          </a>
+        <div id="scroll-buttons">
+          <div id="scroll-up" class="button">&uparrow;</div>
+          <div id="scroll-down" class="button">&downarrow;</div>
         </div>
       </div>
     </div>
 
 
 
-    <div id="footer-container" class="main">
-      created by warezoid with the love of freedom and numbers &nbsp; 🧡
-    </div>
+    <div id="filter-popup">
+      <div class="filter-container">
+        <div id="filter-close-container">
+          <span>filter.</span>
+          <span id="close-button">&#10006;</span>
+        </div>
 
+        <div class="filter-content">
+          <div class="filter-content-container">
+            <h3>type.</h3>
 
+            <div class="filter-checkbox-container">
+              <div class="checkbox-label-container">
+                <label for="type-software">software.</label>
+                <input type="checkbox" id="type-software">
+              </div>
 
+              <div class="checkbox-label-container">
+                <label for="type-3dprinting">3d printing.</label>
+                <input type="checkbox" id="type-3dprinting">
+              </div>
 
+              <div class="checkbox-label-container">
+                <label for="type-software">software.</label>
+                <input type="checkbox" id="type-software">
+              </div>
 
-    <div id="navigation">
-      <div class="navigation-row">
-        <a href="./../../index.html#projects-main" id="home">
-          <div class="button">
-            <img src="./../../src/img/icons/home.svg" alt="Home icon">
+              <div class="checkbox-label-container">
+                <label for="type-3dprinting">3d printing.</label>
+                <input type="checkbox" id="type-3dprinting">
+              </div>
+
+              <div class="checkbox-label-container">
+                <label for="type-software">software.</label>
+                <input type="checkbox" id="type-software">
+              </div>
+
+              <div class="checkbox-label-container">
+                <label for="type-3dprinting">3d printing.</label>
+                <input type="checkbox" id="type-3dprinting">
+              </div>
+            </div>
           </div>
-        </a>
+          
+          <div class="filter-content-container">
+            <h3>date.</h3>
 
-        <div id="filter-buttons" class="button">
-          <span class="filter-text">filter.</span>
-          <div class="filter-image">
-            <img src="./../../src/img/icons/settings.svg" alt="Settings icon">
+            <div class="filter-checkbox-container">
+              <div class="checkbox-label-container">
+                <label for="date-2024">2024.</label>
+                <input type="checkbox" id="date-2024">
+              </div>
+
+              <div class="checkbox-label-container">
+                <label for="date-2025">2025.</label>
+                <input type="checkbox" id="date-2025">
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <div id="scroll-buttons">
-        <div id="scroll-up" class="button">&uparrow;</div>
-        <div id="scroll-down" class="button">&downarrow;</div>
-      </div>
-      
     </div>
-
-
 
 
 

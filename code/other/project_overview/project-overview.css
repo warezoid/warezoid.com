@@ -1,11 +1,24 @@
 /* navigation */
-#home img{
+#home img, .filter-image img{
     filter: drop-shadow(0 0 5px #fff2d8);
 }
 
-#scroll-buttons, #home{
+#scroll-buttons, #home, #filter-buttons{
     visibility: visible;
     pointer-events: all;
+}
+
+#filter-buttons{
+    width: 180px;
+}
+
+.filter-text{
+    color: #fff2d8;
+    font-size: 26px;
+}
+
+.filter-image{
+    display: none;
 }
 
 
@@ -46,6 +59,109 @@
 .one-project{
     max-width: 420px;
     max-height: 520px;
+}
+
+
+
+/* filter */
+#filter-popup{
+    z-index: 1100;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.filter-container{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.5rem;
+    background-color: #fff2d8;
+    box-shadow: #808080 0px 0px 20px;
+}
+
+#filter-close-container{    
+    width: 96%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: end;
+    font-size: 4rem;
+}
+#filter-close-container #close-button{
+    cursor: pointer;
+    color: #ec6116;
+    text-shadow: #ec6116 0 0 10px;
+}
+
+.filter-content{
+    width: 96%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.filter-content-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-checkbox-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+
+.checkbox-label-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+}
+.checkbox-label-container label{
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+.checkbox-label-container input{
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+
+
+/* media queries */
+@media only screen and (max-width: 799px){
+    #filter-buttons{
+        pointer-events: all;
+        width: 60px;
+    }
+
+    .filter-text{
+        display: none;
+    }
+
+    .filter-image{
+        display: flex;
+    }
+
+    .filter-content{
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5rem;
+    }
 }
 
 
