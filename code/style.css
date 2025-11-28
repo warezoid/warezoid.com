@@ -110,6 +110,12 @@ a{
     font-size: 1.4rem;
 }
 
+.navigation-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 #navbar{
     pointer-events: all;
     display: flex;
@@ -127,11 +133,25 @@ a{
     max-width: 60px;
 }
 
+#filter-buttons{
+    pointer-events: all;
+    width: 180px;
+}
+.filter-text{
+    color: #fff2d8;
+    font-size: 26px;
+}
+.filter-image{
+    display: none;
+}
+
 #scroll-buttons{
     visibility: hidden;
     pointer-events: none;
     display: flex;
     flex-direction: column;
+    justify-self: flex-end;
+    align-self: flex-start;
     gap: 10px;
 }
 
@@ -284,6 +304,17 @@ a{
     #navbar{
         visibility: hidden;
         pointer-events: none;
+    }
+
+    #filter-buttons{
+        pointer-events: all;
+        width: 60px;
+    }
+    .filter-text{
+        display: none;
+    }
+    .filter-image{
+        display: flex;
     }
 
     #scroll-buttons{
