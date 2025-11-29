@@ -41,7 +41,6 @@ btnDown.addEventListener("click", () => {
     scrollTo(0, userPosition + viewHeight)
 })
 
-
 const locateUser = () => {
     let userPosition = window.scrollY
     let half = Math.ceil(viewHeight / 2)
@@ -54,7 +53,6 @@ const locateUser = () => {
     
     return i
 }
-
 
 const getLast = () => {
     let modulo = fullHeight % viewHeight
@@ -85,10 +83,16 @@ import { allProjects } from "./project-database.js"
 
 const projectOverview = document.getElementById("project-overview")
 
-console.log(projectOverview)
-console.log(allProjects)
-
-
+let filterSettings = {
+    type: {
+        "software": true,
+        "3d_printing": true
+    },
+    date: {
+        "2024": true,
+        "2025": true
+    }
+}
 
 
 
@@ -98,17 +102,37 @@ console.log(allProjects)
 const webpage = document.getElementById("webpage")
 const filterPopup = document.getElementById("filter-popup")
 const filterBtn = document.getElementById("filter-buttons")
+const filterCloseBtn = document.getElementById("close-button")
+
+const checkboxSoftware = document.getElementById("type-software")
+const checkbox3dprinting = document.getElementById("type-3dprinting")
+const checkbox2024 = document.getElementById("date-2024")
+const checkbox2025 = document.getElementById("date-2025")
+
+const setCheckbox = () => {
+    checkboxSoftware.checked = filterSettings.type["software"]
+    checkbox3dprinting.checked = filterSettings.type["3d_printing"]
+    checkbox2024.checked = filterSettings.date["2024"]
+    checkbox2025.checked = filterSettings.date["2025"]
+}
+
+const loadCheckbox = () => {
+    filterSettings.type["software"] = checkboxSoftware.checked
+    filterSettings.type["3d_printing"] = checkbox3dprinting.checked
+    filterSettings.date["2024"] = checkbox2024.checked
+    filterSettings.date["2025"] = checkbox2025.checked
+}
 
 filterBtn.addEventListener("click", () => {
+    setCheckbox()
+
     filterPopup.style.display = "flex"
     webpage.classList.add("blured")
 })
 
-
-
-const filterCloseBtn = document.getElementById("close-button")
-
 filterCloseBtn.addEventListener("click", () => {
+    loadCheckbox()
+
     filterPopup.style.display = "none"
     webpage.classList.remove("blured")
 })
