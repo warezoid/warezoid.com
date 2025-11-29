@@ -5,7 +5,7 @@ export const allProjects = [
         link_params: `target="_blank"`,
         link_background: "./../../src/img/slideshow/bitcointags.png",
         type: "software",
-        date: 2025,
+        date: "2025",
         project_name: "Bitcointags",
         project_desc: "Browser extension that converts the fiat price of a product or service within a selected HTML entity into an approximate bitcoin price."
     },
@@ -15,7 +15,7 @@ export const allProjects = [
         link_params: "",
         link_background: "./../../src/img/slideshow/sponge_holder.png",
         type: "3d printing",
-        date: 2025,
+        date: "2025",
         project_name: "Sponge holder",
         project_desc: "Kitchen holder that can hold a sponge and dish detergent and liquid soap."
     },
@@ -25,7 +25,7 @@ export const allProjects = [
         link_params: "",
         link_background: "./../../src/img/overview/plant_marker.png",
         type: "3d printing",
-        date: 2024,
+        date: "2024",
         project_name: "Plant marker",
         project_desc: "Simple plant marker."
     },
@@ -35,7 +35,7 @@ export const allProjects = [
         link_params: "",
         link_background: "./../../src/img/overview/tv_antenna_mount.png",
         type: "3d printing",
-        date: 2024,
+        date: "2024",
         project_name: "TV antenna mount",
         project_desc: "Structure for mounting a TV antenna with zip ties, attached to the TV via VESA screw holes."
     }
