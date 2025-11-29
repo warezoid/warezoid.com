@@ -80,6 +80,20 @@ window.addEventListener("resize", () => {
 
 
 
+//render projects
+import { allProjects } from "./project-database.js"
+
+const projectOverview = document.getElementById("project-overview")
+
+console.log(projectOverview)
+console.log(allProjects)
+
+
+
+
+
+
+
 //filter
 const webpage = document.getElementById("webpage")
 const filterPopup = document.getElementById("filter-popup")
