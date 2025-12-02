@@ -20,6 +20,10 @@ a.highlighting:hover{
     text-decoration: underline;
 }
 
+.text-contrast p{
+    text-shadow: #666666 0 0 10px;
+}
+
 .first-pad{
     padding-left: 5rem;
 }

@@ -38,5 +38,15 @@ export const allProjects = [
         date: "2024",
         project_name: "TV antenna mount",
         project_desc: "Structure for mounting a TV antenna with zip ties, attached to the TV via VESA screw holes."
+    },
+    {
+        active: true,
+        link_url: "./../one_project/towel_holder/towel-holder.html",
+        link_params: "",
+        link_background: "./../one_project/towel_holder/img/final.jpg",
+        type: "3d printing",
+        date: "2025",
+        project_name: "Towel holder",
+        project_desc: "Simple design for hanging towels without hook on the hanger."
     }
 ]
