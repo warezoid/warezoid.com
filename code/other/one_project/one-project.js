@@ -1,3 +1,83 @@
+// toggle buttons
+let fullHeight = document.documentElement.scrollHeight
+let viewHeight = window.innerHeight
+
+const btnUp = document.getElementById("scroll-up")
+const btnDown = document.getElementById("scroll-down")
+
+const showNavButtons = () => {
+    fullHeight = document.documentElement.scrollHeight
+    viewHeight = window.innerHeight
+    
+    if(fullHeight > viewHeight){
+        switch(locateUser()){
+            case 1:
+                btnUp.style.display = "none"
+                btnDown.style.display = "flex"
+                break;
+            case getLast():
+                btnUp.style.display = "flex"
+                btnDown.style.display = "none"
+                break;
+            default:               
+                btnUp.style.display = "flex"
+                btnDown.style.display = "flex"
+                break;
+        }
+
+        return
+    }
+
+    btnUp.style.display = "none"
+    btnDown.style.display = "none"
+}
+
+btnUp.addEventListener("click", () => {
+    let userPosition = window.scrollY
+    scrollTo(0, userPosition - viewHeight)
+})
+btnDown.addEventListener("click", () => {
+    let userPosition = window.scrollY
+    scrollTo(0, userPosition + viewHeight)
+})
+
+const locateUser = () => {
+    let userPosition = window.scrollY
+    let half = Math.ceil(viewHeight / 2)
+    let modulo = userPosition % viewHeight
+    let i = ((userPosition - modulo) / viewHeight) + 1  
+
+    if(modulo >= half){
+        i++
+    }
+    
+    return i
+}
+
+const getLast = () => {
+    let modulo = fullHeight % viewHeight
+    let i = (fullHeight - modulo) / viewHeight
+
+    if(modulo){
+        i++
+    }
+    
+    return i
+}
+
+showNavButtons()
+
+window.addEventListener("scroll", () => {
+    showNavButtons()    
+})
+window.addEventListener("resize", () => {
+    showNavButtons()   
+})
+
+
+
+
+
 // blobs animation
 const tween1 = KUTE.fromTo(
     '#blob-1',
