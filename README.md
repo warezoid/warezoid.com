@@ -1,10 +1,14 @@
-# warezoid
-The [warezoid](https://warezoid.com/) website repository, which serves as my personal portfolio. The website contains several interesting components created according to my own concept.
+# warezoid.com
+[warezoid.com](https://warezoid.com/) repository serves as repository for my personal portfolio website, which contains several interesting components created according to my own concept.
 
 
 
 ## Table of content
 - [License](#license)
+- [Components](#components)
+    - [Project slideshow](#project-slideshow)
+    - [Project overview](#project-overview)
+    - [Photo gallery](#photo-gallery)
 - [Sources](#sources)
 
 
@@ -17,6 +21,13 @@ Project is licensed under the MIT License, except for the contents of the direct
 /src/img/blobs
 /src/img/icons
 ```
+
+
+
+## Components
+### Project slideshow
+### Project overview
+### Photo gallery
 
 
 
