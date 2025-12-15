@@ -1,1 +1,1 @@
-**README**
+# warezoid
