@@ -26,6 +26,29 @@ Project is licensed under the MIT License, except for the contents of the direct
 
 ## Components
 ### Project slideshow
+Project slideshow is a component used to present a selection of my projects. The content of the component changes at certain intervals, creating the impression of a slideshow.
+
+![Project slideshow](./docs/img/project_slideshow.gif)
+
+#### HTML
+Only the content changes in the HTML section. Below you will find the HTML skeleton.
+
+```
+<div class="projects-slideshow">
+    <div class="one-project" id="slideshow">
+        <div class="one-project-toolbar">
+            <div id="slideshow-loading"></div>
+            <p id="slideshow-type">...</p>
+        </div>
+
+        <div class="one-project-text">
+            <h3 id="slideshow-name">...</h3>
+            <p id="slideshow-description">...</p>
+        </div>
+    </div>
+</div>
+```
+
 ### Project overview
 ### Photo gallery
 
