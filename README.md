@@ -25,6 +25,9 @@ Project is licensed under the MIT License, except for the contents of the direct
 
 
 ## Components
+Below is a general description of how the components that interest me on [warezoid.com](https://warezoid.com/) work.
+
+
 ### Project slideshow
 Project slideshow is a component used to present a selection of my projects. The content of the component changes at certain intervals, creating the impression of a slideshow.
 
@@ -33,7 +36,7 @@ Project slideshow is a component used to present a selection of my projects. The
 #### HTML
 Only the content changes in the HTML section. Below you will find the HTML skeleton.
 
-```
+```html
 <div class="projects-slideshow">
     <div class="one-project" id="slideshow">
         <div class="one-project-toolbar">
@@ -47,6 +50,82 @@ Only the content changes in the HTML section. Below you will find the HTML skele
         </div>
     </div>
 </div>
+```
+
+#### JavaScript
+All projects included in the project slideshow are stored in an object array called **slideshowProjects** with the following structure. Short descriptions of individual properties have been added.
+
+```javascript
+const slideshowProjects = [
+    {
+        id: ...,
+        type: "...",
+        background: "...",
+        name: "...",
+        link: "...",
+        description: "..."
+    },
+]
+
+/*
+    id: project id, used while rendering project slideshow
+    type: project type (software, 3d printing, ...), used to sort projects
+    background: path to background image
+    name: project name
+    link: link to project page
+    description: short description of the project
+*/
+```
+
+##### Projects rendering
+The entire rendering of objects depends on the **slideshowIndex** variable, which is changed at certain time intervals. The function that renders objects is shown below.
+
+```javascript
+let slideshowIndex = 0
+let slideShowInterval
+
+const slideshow = document.getElementById("slideshow")
+const slideshowType = document.getElementById("slideshow-type")
+const slideshowName = document.getElementById("slideshow-name")
+const slideshowDescription = document.getElementById("slideshow-description")
+const loadingCircle = document.getElementById("slideshow-loading")
+
+const updateSlideshow = () => {
+    let obj = slideshowProjects[slideshowIndex]
+
+    slideshow.style.backgroundImage = `url(.../${obj.background})`
+    slideshowType.innerText = `${obj.type}.`
+    slideshowName.innerText = `${obj.name}`
+    slideshowDescription.innerText = `${obj.description}`
+
+    startLoading()
+}
+```
+
+**startLoading** function is responsible for animating the loading wheel in the upper left corner.
+
+![Project slideshow](./docs/img/project_slideshow.gif)
+
+```javascript
+let progress
+let loadingInterval
+
+const startLoading = () => {
+    clearInterval(loadingInterval)
+    progress = 0
+
+    loadingInterval = setInterval(() => {
+        progress++
+  
+        if(progress > 100){
+            clearInterval(loadingInterval)
+            
+            return
+        }
+               
+        loadingCircle.style.background = `conic-gradient(#fff2d8 0% ${progress}%, #fff2d886 ${progress}% 100%)`
+    }, 75)
+}
 ```
 
 ### Project overview
