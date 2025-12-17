@@ -189,15 +189,23 @@ Sources can be seen as links to products used in [warezoid](https://warezoid.com
     - Google Fonts - font used in warezoid: [fonts.google.com](https://fonts.google.com/)
         - Cal Sans - specific font used in warezoid: [Cal Sans - Google Fonts](https://fonts.google.com/specimen/Cal+Sans)
     - Haikei - blob generation app: [haikei.app](https://haikei.app/)
-    - SVGrepo - SVG icons library: [svgrepo.com](https://www.svgrepo.com/)
+    - SVGrepo - SVG icons library: [svgrepo.com](https://svgrepo.com/)
+    - Figma - warezoid.com design: [figma.com](https://figma.com/)
+    - FreeConverter - online file format converter: [freeconvert.com](https://www.freeconvert.com)
+    - ezgif - online GIF maker: [ezgif.com](https://ezgif.com/)
 
 - **APIs**
     - KUTE.js - used to animate blobs: [KUTE.js](https://thednp.github.io/kute.js/)
 
 - **Research tools**
     - ChatGPT: [chatgpt.com](https://chatgpt.com)
-    - DeepL: [deepl.com](https://www.deepl.com)
+    - DeepL: [deepl.com](https://deepl.com)
+    - Stackoverflow: [stackoverflow.com](https://stackoverflow.com)
     - And the internet itself.
+
+- **Validators**
+    - HTML validator: [validator.w3.org](https://validator.w3.org)
+    - CSS validator: [jigsaw.w3.org/css-validator](https://jigsaw.w3.org/css-validator)
 
 
 

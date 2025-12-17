@@ -50,3 +50,14 @@ export const allProjects = [
         project_desc: "Simple design for hanging towels without hook on the hanger."
     }
 ]
+
+
+
+
+
+
+
+
+
+
+/* Created by warezoid with the love of freedom and numbers. */
