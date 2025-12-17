@@ -7,6 +7,10 @@
 - [License](#license)
 - [Components](#components)
     - [Project slideshow](#project-slideshow)
+        - [HTML](#html)
+        - [JavaScript](#javascript)
+            - [Projects rendering](#projects-rendering)
+            - [Changing slideshowIndex](#changing-slideshowindex)
     - [Project overview](#project-overview)
     - [Photo gallery](#photo-gallery)
 - [Sources](#sources)
@@ -106,6 +110,8 @@ const updateSlideshow = () => {
 
 ![Project slideshow](./docs/img/project_slideshow.gif)
 
+Below you will find the code of **startLoading** function:
+
 ```javascript
 let progress
 let loadingInterval
@@ -127,6 +133,48 @@ const startLoading = () => {
     }, 75)
 }
 ```
+
+##### Changing slideshowIndex
+**startSlideshow** function gradually increments the value of the **slideshowIndex** variable at regular intervals in the range *<0; slideshowProjects.length - 1>* to prevent overflow. The corresponding code is shown below.
+
+```javascript
+const startSlideshow = () => {
+    startLoading()
+
+    slideShowInterval = setInterval(() => {
+        if(slideshowIndex == slideshowProjects.length - 1){
+            slideshowIndex = 0
+        }
+        else{
+            slideshowIndex++
+        }
+        
+        slideshow.style.animation = "fadeOut 0.2s forwards"
+    }, 8000)
+}
+
+slideshow.addEventListener("animationend", (e) => {
+    if(e.animationName == "fadeOut"){
+        slideshow.style.animation = "fadeIn 0.2s forwards"
+        updateSlideshow()
+    }
+})
+```
+
+To complete the code, you need to add a function that redirects users to the current project page when they click on the slideshow.
+
+```javascript
+slideshow.addEventListener("click", () => { 
+    window.location.href = slideshowProjects[slideshowIndex].link
+})
+```
+
+The entire functionality is then launched by calling the **startSlideshow** function.
+
+```javascript
+startSlideshow()
+```
+
 
 ### Project overview
 ### Photo gallery

@@ -180,27 +180,7 @@ const updateSlideshow = () => {
     startLoading()
 }
 
-const startSlideshow = () => {
-    startLoading()
 
-    slideShowInterval = setInterval(() => {
-        if(slideshowIndex == slideshowProjects.length - 1){
-            slideshowIndex = 0
-        }
-        else{
-            slideshowIndex++
-        }
-        
-        slideshow.style.animation = "fadeOut 0.2s forwards"
-    }, 8000)
-}
-
-slideshow.addEventListener("animationend", (e) => {
-    if(e.animationName == "fadeOut"){
-        slideshow.style.animation = "fadeIn 0.2s forwards"
-        updateSlideshow()
-    }
-})
 
 slideshow.addEventListener("click", () => { 
     window.location.href = slideshowProjects[slideshowIndex].link
