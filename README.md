@@ -54,12 +54,23 @@ Only the content changes in the HTML section. Below you will find the HTML skele
         </div>
     </div>
 </div>
+
+<!-- index.html line 83 -->
 ```
 
 #### JavaScript
 All projects included in the project slideshow are stored in an object array called **slideshowProjects** with the following structure. Short descriptions of individual properties have been added.
 
 ```javascript
+/*
+    id: project id, used while rendering project slideshow
+    type: project type (software, 3d printing, ...), used to sort projects
+    background: path to background image
+    name: project name
+    link: link to project page
+    description: short description of the project
+*/
+
 const slideshowProjects = [
     {
         id: ...,
@@ -71,14 +82,7 @@ const slideshowProjects = [
     },
 ]
 
-/*
-    id: project id, used while rendering project slideshow
-    type: project type (software, 3d printing, ...), used to sort projects
-    background: path to background image
-    name: project name
-    link: link to project page
-    description: short description of the project
-*/
+// script.js line 144
 ```
 
 ##### Projects rendering
@@ -104,6 +108,8 @@ const updateSlideshow = () => {
 
     startLoading()
 }
+
+// script.js line 163
 ```
 
 **startLoading** function is responsible for animating the loading wheel in the upper left corner.
@@ -132,6 +138,8 @@ const startLoading = () => {
         loadingCircle.style.background = `conic-gradient(#fff2d8 0% ${progress}%, #fff2d886 ${progress}% 100%)`
     }, 75)
 }
+
+// script.js line 119
 ```
 
 ##### Changing slideshowIndex
@@ -159,6 +167,8 @@ slideshow.addEventListener("animationend", (e) => {
         updateSlideshow()
     }
 })
+
+// script.js line 183
 ```
 
 To complete the code, you need to add a function that redirects users to the current project page when they click on the slideshow.
@@ -167,12 +177,16 @@ To complete the code, you need to add a function that redirects users to the cur
 slideshow.addEventListener("click", () => { 
     window.location.href = slideshowProjects[slideshowIndex].link
 })
+
+// script.js line 205
 ```
 
 The entire functionality is then launched by calling the **startSlideshow** function.
 
 ```javascript
 startSlideshow()
+
+// script.js line 74
 ```
 
 
