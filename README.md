@@ -206,6 +206,15 @@ HTML part of project overview include only following code, which is container fo
 <!-- project-overview.html line 30  -->
 ```
 
+Both JavaScript files must be linked with the module type.
+
+```html
+<script type="module" src="project-database.js"></script>
+<script type="module" src="project-overview.js"></script>
+
+<!-- project-overview.html line 117  -->
+```
+
 #### Javascript
 All projects displayed in the project overview are stored in the **project-database.js** file in the following structure. A simple description of the structure is provided here.
 
