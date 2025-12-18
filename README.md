@@ -12,6 +12,8 @@
             - [Projects rendering](#projects-rendering)
             - [Changing slideshowIndex](#changing-slideshowindex)
     - [Project overview](#project-overview)
+        - [HTML](#html-1)
+        - [JavaScript](#javascript-1)
     - [Photo gallery](#photo-gallery)
 - [Sources](#sources)
 
@@ -191,6 +193,50 @@ startSlideshow()
 
 
 ### Project overview
+Project overview ensures that projects stored in the internal database are rendered on the page.
+
+![Project overview](./docs/img/project_overview.png)
+
+#### HTML
+HTML part of project overview include only following code, which is container for the rendered elements.
+
+```html
+<div id="project-overview"></div>
+
+<!-- project-overview.html line 30  -->
+```
+
+#### Javascript
+All projects displayed in the project overview are stored in the **project-database.js** file in the following structure. A simple description of the structure is provided here.
+
+```javascript
+/*
+    active: bool variable used to filter elements
+    link_url: link to project page
+    link_params: additional link parameters
+    link_background: source of background image
+    type: project type
+    date: project release date
+    project_name: name of project
+    project_desc: project description
+*/
+
+export const allProjects = [
+    {
+        active: ...,
+        link_url: "...",
+        link_params: `...`,
+        link_background: "...",
+        type: "...",
+        date: "...",
+        project_name: "...",
+        project_desc: "..."
+    }
+]
+
+// project-database.js line 1
+```
+
 ### Photo gallery
 
 
