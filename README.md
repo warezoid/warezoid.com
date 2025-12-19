@@ -246,6 +246,48 @@ export const allProjects = [
 // project-database.js line 1
 ```
 
+##### Render projects
+First, we need to import **allProjects** from **project-database.js**.
+
+```javascript
+import { allProjects } from "./project-database.js"
+
+// project-overview.js line 82
+```
+
+Function that renders elements to the page is called **renderProjects** and simply renders all elements from **allProjects** that have the **active** parameter set to *true*. **renderProjects** function is shown below.
+
+```javascript
+const projectOverview = document.getElementById("project-overview")
+
+const renderProjects = () => {
+    projectOverview.innerHTML = ""
+
+    allProjects.forEach((oneProject) => {
+        if(oneProject.active){
+            projectOverview.innerHTML += `
+                <a href="${oneProject.link_url}" ${oneProject.link_params}>
+                    <div class="one-project" style="background-image: url(${oneProject.link_background});">
+                        <div class="one-project-toolbar">
+                            <p>${oneProject.type}.</p>
+                            <p>${oneProject.date}</p>
+                        </div>
+
+                        <div class="one-project-text">
+                            <h3>${oneProject.project_name}</h3>
+                            <p>${oneProject.project_desc}</p>
+                        </div>
+                    </div>
+                </a>
+            `
+        }
+    })
+}
+
+// project-overview.js line 84
+```
+
+
 ### Photo gallery
 
 
