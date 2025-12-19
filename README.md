@@ -14,6 +14,7 @@
     - [Project overview](#project-overview)
         - [HTML](#html-1)
         - [JavaScript](#javascript-1)
+            - [Render projects](#render-projects)
     - [Photo gallery](#photo-gallery)
 - [Sources](#sources)
 
