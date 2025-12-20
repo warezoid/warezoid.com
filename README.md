@@ -17,6 +17,8 @@
             - [Render projects](#render-projects)
     - [Project filtering](#project-filtering)
         - [HTML](#html-2)
+        - [JavaScript](#javascript-2)
+            - [Set checkbox](#set-checkbox)
     - [Photo gallery](#photo-gallery)
 - [Sources](#sources)
 
@@ -358,6 +360,79 @@ The second part is a popup filter, which is activated by pressing the filter but
 </div>
 
 <!-- project-overview.html line 70 -->
+```
+
+#### JavaScript
+Current filter settings are stored in the **filterSettings** object.
+
+```javascript
+let filterSettings = {
+    type: {
+        "software": true,
+        "3d printing": true
+    },
+    date: {
+        "2024": true,
+        "2025": true
+    }
+}
+
+// project-overview.js line 86
+```
+
+##### Set checkbox
+When opening the filter popup, the checkboxes must be set according to the current user settings stored in **filterSettings**.
+
+```javascript
+const webpage = document.getElementById("webpage")
+const filterPopup = document.getElementById("filter-popup")
+const filterBtn = document.getElementById("filter-buttons")
+
+const checkboxSoftware = document.getElementById("type-software")
+const checkbox3dprinting = document.getElementById("type-3dprinting")
+const checkbox2024 = document.getElementById("date-2024")
+const checkbox2025 = document.getElementById("date-2025")
+
+const setCheckbox = () => {
+    checkboxSoftware.checked = filterSettings.type["software"]
+    checkbox3dprinting.checked = filterSettings.type["3d printing"]
+    checkbox2024.checked = filterSettings.date["2024"]
+    checkbox2025.checked = filterSettings.date["2025"]
+}
+
+filterBtn.addEventListener("click", () => {
+    setCheckbox()
+
+    filterPopup.style.display = "flex"
+    webpage.classList.add("blured")
+})
+
+// project-overview.js line 144
+```
+
+##### Get checkbox
+Conversely, when closing the filter popup, it is necessary to load the values from the checkboxes into **filterSettings**.
+
+```javascript
+const filterCloseBtn = document.getElementById("close-button")
+
+const loadCheckbox = () => {
+    filterSettings.type["software"] = checkboxSoftware.checked
+    filterSettings.type["3d printing"] = checkbox3dprinting.checked
+    filterSettings.date["2024"] = checkbox2024.checked
+    filterSettings.date["2025"] = checkbox2025.checked
+
+    updateProjects()
+}
+
+filterCloseBtn.addEventListener("click", () => {
+    loadCheckbox()
+
+    filterPopup.style.display = "none"
+    webpage.classList.remove("blured")
+})
+
+// project-overview.js line 147
 ```
 
 
