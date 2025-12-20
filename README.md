@@ -19,6 +19,8 @@
         - [HTML](#html-2)
         - [JavaScript](#javascript-2)
             - [Set checkbox](#set-checkbox)
+            - [Get checkbox](#get-checkbox)
+            - [Update projects](#update-projects)
     - [Photo gallery](#photo-gallery)
 - [Sources](#sources)
 
@@ -433,6 +435,30 @@ filterCloseBtn.addEventListener("click", () => {
 })
 
 // project-overview.js line 147
+```
+
+##### Update projects
+...
+
+```javascript
+const updateProjects = () => {
+    for(let i = 0; i < allProjects.length; i++){
+        let oneProject = allProjects[i]
+
+        if(filterSettings.type[oneProject.type]) {
+            if(filterSettings.date[oneProject.date]){
+                oneProject.active = true
+                continue
+            }
+        }
+
+        oneProject.active = false
+    }
+    
+    renderProjects()
+}
+
+// project-overview.js line 122
 ```
 
 
