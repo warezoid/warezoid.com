@@ -15,6 +15,8 @@
         - [HTML](#html-1)
         - [JavaScript](#javascript-1)
             - [Render projects](#render-projects)
+    - [Project filtering](#project-filtering)
+        - [HTML](#html-2)
     - [Photo gallery](#photo-gallery)
 - [Sources](#sources)
 
@@ -286,6 +288,76 @@ const renderProjects = () => {
 }
 
 // project-overview.js line 84
+```
+
+
+### Project filtering
+Project overview also features functional project filtering.
+
+![Project filtering](./docs/img/filter.gif)
+
+#### HTML
+The HTML code consists of two parts. The first part is the filter button.
+
+```html
+<div id="filter-buttons" class="button">
+    <span class="filter-text">filter.</span>
+
+    <div class="filter-image">
+        <img src="..." alt="Settings icon">
+    </div>
+</div>
+
+<!-- project-overview.html line 52 -->
+```
+
+The second part is a popup filter, which is activated by pressing the filter button and allows the user to enter filtering parameters.
+
+```html
+<div id="filter-popup">
+    <div class="filter-container">
+        <div id="filter-close-container">
+            <span>filter.</span>
+            <span id="close-button">&#10006;</span>
+        </div>
+
+        <div class="filter-content">
+            <div class="filter-content-container">
+                <h3>type.</h3>
+
+                <div class="filter-checkbox-container">
+                    <div class="checkbox-label-container">
+                        <label for="type-software">software.</label>
+                        <input type="checkbox" id="type-software">
+                    </div>
+
+                    <div class="checkbox-label-container">
+                        <label for="type-3dprinting">3d printing.</label>
+                        <input type="checkbox" id="type-3dprinting">
+                    </div>
+                </div>
+            </div>
+                
+            <div class="filter-content-container">
+                <h3>date.</h3>
+
+                <div class="filter-checkbox-container">
+                    <div class="checkbox-label-container">
+                        <label for="date-2024">2024.</label>
+                        <input type="checkbox" id="date-2024">
+                    </div>
+
+                    <div class="checkbox-label-container">
+                        <label for="date-2025">2025.</label>
+                        <input type="checkbox" id="date-2025">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- project-overview.html line 70 -->
 ```
 
 
