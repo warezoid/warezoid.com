@@ -438,7 +438,11 @@ filterCloseBtn.addEventListener("click", () => {
 ```
 
 ##### Update projects
-...
+After reading data from checkboxes, it is necessary to update the values of the **active** variable in the **allProjects** array.
+
+Filtering is based on *AND* logic. This means that only elements that meet all active checkboxes will be active. If the user wants to omit a parameter from filtering, they must leave all checkboxes for that parameter active. 
+
+The variable **active** of an individual project is set to *true* only if all parameters with corresponding key values stored in **filterSettings** are *true*.
 
 ```javascript
 const updateProjects = () => {
