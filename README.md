@@ -470,6 +470,8 @@ const updateProjects = () => {
 ### Photo gallery
 Photo gallery displays an overview of photos and allows the user to browse them in enlarged mode.
 
+![Photo gallery](./docs/img/photo_gallery.gif)
+
 #### HTML
 HTML part of the photo gallery consists of two parts. An overview of photos and a popup window.
 
