@@ -22,6 +22,7 @@
             - [Get checkbox](#get-checkbox)
             - [Update projects](#update-projects)
     - [Photo gallery](#photo-gallery)
+        - [HTML](#html-3)
 - [Sources](#sources)
 
 
@@ -467,7 +468,54 @@ const updateProjects = () => {
 
 
 ### Photo gallery
+Photo gallery displays an overview of photos and allows the user to browse them in enlarged mode.
 
+#### HTML
+HTML part of the photo gallery consists of two parts. An overview of photos and a popup window.
+
+```html
+<div id="photo-gallery" class="main">
+    <div class="content">
+        <div class="content-text article-content-text">
+            <h2>Photo gallery</h2>
+        </div>
+
+        <div id="gallery-content">
+            <div class="gallery-content-image">
+                <img src="..." alt="...">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- code/other/one_project/*/*.html -->
+```
+
+Below is the HTML code for the photo gallery popup window.
+
+```html
+<div id="gallery-popup">
+    <div class="gallery-popup-close">
+        <span id="gallery-popup-closeBtn">&#10006;</span>
+    </div>
+
+    <div class="gallery-popup-controls">
+        <div id="gallery-popup-backButton">
+            <span>&#10094;</span>
+        </div>
+        
+        <div class="gallery-popup-image">
+            <img src="..." alt="..." id="gallery-popup-image">
+        </div>
+
+        <div id="gallery-popup-forwardButton">
+            <span>&#10095;</span>
+        </div>
+    </div>
+</div>
+
+<!-- code/other/one_project/*/*.html -->
+```
 
 
 ## Sources
