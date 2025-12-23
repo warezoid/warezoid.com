@@ -23,6 +23,7 @@
             - [Update projects](#update-projects)
     - [Photo gallery](#photo-gallery)
         - [HTML](#html-3)
+        - [JavaScript](#javascript-3)
 - [Sources](#sources)
 
 
@@ -518,6 +519,43 @@ Below is the HTML code for the photo gallery popup window.
 
 <!-- code/other/one_project/*/*.html -->
 ```
+
+#### JavaScript
+Popup photo gallery opens when you click on any item in the photo overview. Viewing photos will start with the photo that was selected.
+
+```javascript
+const webpage = document.getElementById("webpage")
+const galleryPopup = document.getElementById("gallery-popup")
+
+const galleryContent = document.getElementById("gallery-content")
+const galleryContentImages = Array.from(galleryContent.children)
+const galleryPopupImage = document.getElementById("gallery-popup-image")
+
+galleryContent.addEventListener("click", (e) => {
+    if(e.target.nodeName == "IMG"){
+        galleryPopupImage.src = e.target.attributes.src.nodeValue
+        index = galleryContentImages.indexOf(e.target.parentElement)
+        galleryPopup.style.display = "flex"
+        webpage.classList.add("blured")
+    }
+})
+
+// one-project.js line 101
+```
+
+Popup window is then closed by clicking on the cross icon.
+
+```javascript
+const galleryCloseBtn = document.getElementById("gallery-popup-closeBtn")
+
+galleryCloseBtn.addEventListener("click", () => {
+    galleryPopup.style.display = "none"
+    webpage.classList.remove("blured")
+})
+
+// one-project.js line 103
+```
+
 
 
 ## Sources
