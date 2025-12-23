@@ -24,6 +24,7 @@
     - [Photo gallery](#photo-gallery)
         - [HTML](#html-3)
         - [JavaScript](#javascript-3)
+            - [Set image](#set-image)
 - [Sources](#sources)
 
 
@@ -554,6 +555,17 @@ galleryCloseBtn.addEventListener("click", () => {
 })
 
 // one-project.js line 103
+```
+
+##### Set image
+The **setImage** function takes care of changing the image to the current one. It accepts the index of the current image in the image list as a parameter.
+
+```javascript
+const setImage = (i) => {
+    galleryPopupImage.src = galleryContentImages[i].firstElementChild.attributes.src.nodeValue
+}
+
+// one-project.js line 131
 ```
 
 
