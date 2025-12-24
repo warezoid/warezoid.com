@@ -25,6 +25,7 @@
         - [HTML](#html-3)
         - [JavaScript](#javascript-3)
             - [Set image](#set-image)
+            - [Change index](#change-index)
 - [Sources](#sources)
 
 
@@ -566,6 +567,41 @@ const setImage = (i) => {
 }
 
 // one-project.js line 131
+```
+
+##### Change index
+The **index** is a variable that stores the position of the current image in the image array. Interacting with the back and forward buttons changes the value of the **index** variable.
+
+```javascript
+const backBtn = document.getElementById("gallery-popup-backButton")
+const forwardBtn = document.getElementById("gallery-popup-forwardButton")
+let index = -1
+
+backBtn.addEventListener("click", () => {
+    if(index != -1){
+        index--
+
+        if(index < 0){
+            index = galleryContentImages.length - 1
+        }
+
+        setImage(index)
+    }
+})
+
+forwardBtn.addEventListener("click", () => {
+    if(index != -1){
+        index++
+
+        if(index > (galleryContentImages.length - 1)){
+            index = 0
+        }
+
+        setImage(index)
+    }
+})
+
+// one-project.js line 127
 ```
 
 
