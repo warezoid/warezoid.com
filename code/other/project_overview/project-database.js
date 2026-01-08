@@ -48,6 +48,16 @@ export const allProjects = [
         date: "2025",
         project_name: "Towel holder",
         project_desc: "Simple design for hanging towels without hook on the hanger."
+    },
+    {
+        active: true,
+        link_url: "./../one_project/smart_flowerpot/smart_flowerpot.html",
+        link_params: "",
+        link_background: "./../one_project/smart_flowerpot/img/flowerpot_current_cad.png",
+        type: "IoT",
+        date: "2026",
+        project_name: "Smart flowerpot",
+        project_desc: "Self-sufficient and ECO-friendly flowerpot for growing vegetables."
     }
 ]
 
