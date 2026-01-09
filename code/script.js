@@ -157,6 +157,14 @@ const slideshowProjects = [
         name: "Sponge holder",
         link: "https://warezoid.com/other/one_project/sponge_holder/sponge-holder.html",
         description: "The goal of this project is to create a kitchen holder that can hold a sponge and dish detergent and liquid soap."
+    },
+    {
+        id: 2,
+        type: "IoT",
+        background: "smart_flowerpot.png",
+        name: "Smart flowerpot",
+        link: "https://warezoid.com/other/one_project/smart_flowerpot/smart_flowerpot.html",
+        description: "IoT project that aims to create a self-sufficient and eco-friendly raised bed for growing vegetables."
     }
 ]
 
