@@ -157,10 +157,15 @@ const slideshowProjects = [
         name: "Sponge holder",
         link: "https://warezoid.com/other/one_project/sponge_holder/sponge-holder.html",
         description: "The goal of this project is to create a kitchen holder that can hold a sponge and dish detergent and liquid soap."
-    },
+    }
 ]
 
-let slideshowIndex = 0
+const getSlideshowIndex = () => {
+    const max = slideshowProjects.length    
+    return Math.floor(Math.random() * max)
+}
+
+let slideshowIndex = getSlideshowIndex()
 let slideShowInterval
 
 const slideshow = document.getElementById("slideshow")
@@ -181,8 +186,8 @@ const updateSlideshow = () => {
 }
 
 const startSlideshow = () => {
-    startLoading()
-
+    updateSlideshow()
+    
     slideShowInterval = setInterval(() => {
         if(slideshowIndex == slideshowProjects.length - 1){
             slideshowIndex = 0
