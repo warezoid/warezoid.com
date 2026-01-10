@@ -6,10 +6,17 @@
   font-style: normal;
 }
 
-/* global */
+/* global
+
+    1. Change colors of contact icons.
+    2. Add some color combos. Maybe add some fancy structure -> by keyword set :root variables. 
+    3. BONUS: Change heart colors in warezoid quote.
+
+*/
 :root{
     --prim-color: #ec6116;
     --sec-color: #ffba08;
+    --icons-color: #ff9408;
 }
 
 /* gradient */
