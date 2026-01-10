@@ -6,7 +6,20 @@
   font-style: normal;
 }
 
+/* global */
+:root{
+    --prim-color: #ec6116;
+    --sec-color: #ffba08;
+}
 
+/* gradient */
+.gradient-color-1{
+    stop-color: var(--prim-color);
+}
+
+.gradient-color-2{
+    stop-color: var(--sec-color);
+}
 
 /* all */
 *{
@@ -35,14 +48,14 @@ h2{
 
 h3{
     font-size: 3rem;
-    color: #ec6116;
-    text-shadow: #ec6116 0 0 5px;
+    color: var(--prim-color);
+    text-shadow: var(--prim-color) 0 0 5px;
 }
 
 h4{
     font-size: 2rem;
-    color: #ec6116;
-    text-shadow: #ec6116 0 0 5px;
+    color: var(--prim-color);
+    text-shadow: var(--prim-color) 0 0 5px;
 }
 
 p{
@@ -54,7 +67,7 @@ a{
 }
 
 .highlighting{
-    color: #ec6116;
+    color: var(--prim-color);
 }
 
 .blured{
@@ -70,9 +83,9 @@ a{
     align-items: center;
     border-radius: 14px;
     font-size: 30px;
-    background: linear-gradient(145deg, #ffba08, #ec6116);
+    background: linear-gradient(145deg, var(--sec-color), var(--prim-color));
     color: #fff2d8;
-    box-shadow: #ec6116 0px 0px 20px;
+    box-shadow: var(--prim-color) 0px 0px 20px;
     text-shadow: #fff2d8 0 0 5px;
 }
 
@@ -86,9 +99,9 @@ a{
     margin-top: 16px;
     border-radius: 14px;
     font-size: 24px;
-    background: linear-gradient(145deg, #ffba08, #ec6116);
+    background: linear-gradient(145deg, var(--sec-color), var(--prim-color));
     color: #fff2d8;
-    box-shadow: #ec6116 0px 0px 20px;
+    box-shadow: var(--prim-color) 0px 0px 20px;
     text-shadow: #fff2d8 0 0 5px;
 }
 .text-button:hover, .button:hover, #navbar a:hover{

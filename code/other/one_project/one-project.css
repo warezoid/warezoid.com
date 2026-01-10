@@ -9,11 +9,11 @@ ul{
 li:hover{
     transition: 0.4s;
     transform: scale(1.05);
-    color: #ec6116;
+    color: var(--prim-color);
 }
 li:hover a{
     transition: 0.4s;
-    color: #ec6116;
+    color: var(--prim-color);
 }
 
 a.highlighting:hover{
@@ -126,7 +126,7 @@ a.highlighting:hover{
 }
 
 .one-project-text a{
-    text-shadow: #ec6116 0 0 10px;
+    text-shadow: var(--prim-color) 0 0 10px;
 }
 
 .article-content{
@@ -207,12 +207,12 @@ a.highlighting:hover{
 }
 #gallery-popup span{
     cursor: pointer;
-    color: #ec6116;
-    text-shadow: #ec6116 0 0 10px;
+    color: var(--prim-color);
+    text-shadow: var(--prim-color) 0 0 10px;
 }
 #gallery-popup span:hover{
     transition: 0.4s;
-    text-shadow: #ec6116 0 0 20px;
+    text-shadow: var(--prim-color) 0 0 20px;
 }
 
 .gallery-popup-close{

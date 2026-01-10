@@ -98,8 +98,8 @@
 }
 #filter-close-container #close-button{
     cursor: pointer;
-    color: #ec6116;
-    text-shadow: #ec6116 0 0 10px;
+    color: var(--prim-color);
+    text-shadow: var(--prim-color) 0 0 10px;
 }
 
 .filter-content{
