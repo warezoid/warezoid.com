@@ -8,14 +8,35 @@
 
 /* global
 
-    1. Add some color combos. Maybe add some fancy structure -> by keyword set :root variables. 
-    2. BONUS: Change heart colors in warezoid quote.
+    1. BONUS: Change heart colors in warezoid quote.
 
 */
 :root{
-    --prim-color: #ec6116;
-    --sec-color: #ffba08;
-    --icons-color: #ff9408;
+    /* color packages */
+    --orange-prim: #ec6116;
+    --orange-sec: #ffba08;
+    --orange-icons: #ff9408;
+
+    --purple-prim: #b5179e;
+    --purple-sec: #560bad;
+    --purple-icons: #e012a3;
+
+    --cherry-prim: #c9184a;
+    --cherry-sec: #800f2f;
+    --cherry-icons: #ff4d6d;
+
+    --green-prim: #3cbe00;
+    --green-sec: #007200;
+    --green-icons: #4ecf12;
+
+    --blue-prim: #00b4d8;
+    --blue-sec: #023e8a;
+    --blue-icons: #48cae4;
+
+    /* current color template */
+    --prim-color: var(--cherry-prim);
+    --sec-color: var(--cherry-sec);
+    --icons-color: var(--cherry-icons);
 }
 
 /* gradient */
