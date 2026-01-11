@@ -8,9 +8,8 @@
 
 /* global
 
-    1. Change colors of contact icons.
-    2. Add some color combos. Maybe add some fancy structure -> by keyword set :root variables. 
-    3. BONUS: Change heart colors in warezoid quote.
+    1. Add some color combos. Maybe add some fancy structure -> by keyword set :root variables. 
+    2. BONUS: Change heart colors in warezoid quote.
 
 */
 :root{
@@ -289,10 +288,11 @@ a{
     gap: 5vw;
     padding-top: 20px;
 }
-.contact-icons img{
+.contact-icons svg{
     width: 60px;
     min-width: 60px;
     height: 60px;
+    fill: var(--icons-color);
 }
 .contact-icons a:hover{
     transition: 0.4s;
@@ -361,7 +361,7 @@ a{
     .contact-icons{
         gap: 15vw;
     }
-    .contact-icons img{
+    .contact-icons svg{
         min-width: 60px;
     }
 
