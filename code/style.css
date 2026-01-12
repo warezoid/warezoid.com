@@ -6,11 +6,7 @@
   font-style: normal;
 }
 
-/* global
-
-    1. BONUS: Change heart colors in warezoid quote.
-
-*/
+/* global */
 :root{
     /* color packages */
     --orange-prim: #ec6116;
