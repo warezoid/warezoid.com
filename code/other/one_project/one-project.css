@@ -217,7 +217,14 @@ a.highlighting:hover{
 
 .gallery-popup-close{
     width: 80%;
-    text-align: end;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#gallery-popup-name{
+    font-size: 2rem;
+    color: var(--prim-color);
 }
 
 .gallery-popup-controls{

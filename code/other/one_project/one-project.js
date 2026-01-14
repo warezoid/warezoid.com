@@ -115,12 +115,20 @@ galleryCloseBtn.addEventListener("click", () => {
 
 
 const galleryPopupImage = document.getElementById("gallery-popup-image")
+const galleryImageName = document.getElementById("gallery-popup-name")
 const galleryContent = document.getElementById("gallery-content")
 const galleryContentImages = Array.from(galleryContent.children)
+
+const getImageName = (str) => {
+    str = str.replace("Photo gallery - ", "")
+    str = String(str[0]).toUpperCase() + String(str).slice(1)
+    return str
+}
 
 galleryContent.addEventListener("click", (e) => {
     if(e.target.nodeName == "IMG"){
         galleryPopupImage.src = e.target.attributes.src.nodeValue
+        galleryImageName.innerHTML = getImageName(e.target.attributes.alt.nodeValue)
         index = galleryContentImages.indexOf(e.target.parentElement)
         galleryPopup.style.display = "flex"
         webpage.classList.add("blured")
@@ -134,6 +142,7 @@ let index = -1
 
 const setImage = (i) => {
     galleryPopupImage.src = galleryContentImages[i].firstElementChild.attributes.src.nodeValue
+    galleryImageName.innerHTML = getImageName(galleryContentImages[i].firstElementChild.attributes.alt.nodeValue)
 }
 
 const incrementIndex = () => {
