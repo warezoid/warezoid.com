@@ -98,9 +98,38 @@ const tween2 = KUTE.fromTo(
 
 
 // photo gallery
+const webpage = document.getElementById("webpage")
+const galleryPopup = document.getElementById("gallery-popup")
+const galleryCloseBtn = document.getElementById("gallery-popup-closeBtn")
+
+const closeGallery = () => {
+    galleryPopup.style.display = "none"
+    webpage.classList.remove("blured")
+    window.removeEventListener("keyup", handleKeyUp)
+}
+
+galleryCloseBtn.addEventListener("click", () => {
+    closeGallery()
+})
+
+
+
 const galleryPopupImage = document.getElementById("gallery-popup-image")
 const galleryContent = document.getElementById("gallery-content")
 const galleryContentImages = Array.from(galleryContent.children)
+
+galleryContent.addEventListener("click", (e) => {
+    if(e.target.nodeName == "IMG"){
+        galleryPopupImage.src = e.target.attributes.src.nodeValue
+        index = galleryContentImages.indexOf(e.target.parentElement)
+        galleryPopup.style.display = "flex"
+        webpage.classList.add("blured")
+        window.addEventListener("keyup", handleKeyUp)
+    }
+})
+
+
+
 let index = -1
 
 const setImage = (i) => {
@@ -131,8 +160,11 @@ const decrementIndex = () => {
     }    
 }
 
-const handleKeyUp = (e) => {
+const handleKeyUp = (e) => {     
     switch(e.key){
+        case "Escape":
+            closeGallery()
+            break;
         case "ArrowLeft":
             decrementIndex()
             break
@@ -141,30 +173,6 @@ const handleKeyUp = (e) => {
             break;
     }  
 }
-
-
-
-const webpage = document.getElementById("webpage")
-const galleryPopup = document.getElementById("gallery-popup")
-const galleryCloseBtn = document.getElementById("gallery-popup-closeBtn")
-
-galleryCloseBtn.addEventListener("click", () => {
-    galleryPopup.style.display = "none"
-    webpage.classList.remove("blured")
-    window.removeEventListener("keyup", handleKeyUp)
-})
-
-
-
-galleryContent.addEventListener("click", (e) => {
-    if(e.target.nodeName == "IMG"){
-        galleryPopupImage.src = e.target.attributes.src.nodeValue
-        index = galleryContentImages.indexOf(e.target.parentElement)
-        galleryPopup.style.display = "flex"
-        webpage.classList.add("blured")
-        window.addEventListener("keyup", handleKeyUp)
-    }
-})
 
 
 
